@@ -8,6 +8,8 @@ import { useNavigate } from 'react-router-dom'
 import { useCart } from "../context/cart";
 import "../styles/Homepage.css";
 
+axios.defaults.baseURL = 'https://instantshopkaroserver.onrender.com';
+
 const Home = () => {
   const navigate = useNavigate();
   const [cart, setCart] = useCart();
@@ -144,7 +146,7 @@ const Home = () => {
             {products?.map((p) => (
                 <div className="card m-2" style={{ width: "18rem" }}>
                 <img
-                    src={`/api/v1/product/product-photo/${p._id}`}
+                  src={`/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.name}
                 />
