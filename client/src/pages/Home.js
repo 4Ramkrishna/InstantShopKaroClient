@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom'
 import { useCart } from "../context/cart";
 import "../styles/Homepage.css";
 
-axios.defaults.baseURL = 'https://instantshopkaroserver.onrender.com';
 
 const Home = () => {
   const navigate = useNavigate();
